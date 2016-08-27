@@ -11,7 +11,18 @@ class feedread {
  * service contract entered into with RealSatisifed or it's parent company Placester Inc.
  * 
  * 
-
+ 
+ Version 1.1
+ * Last updated 27-Aug-2016 by Phil Kells
+ 
+ Change Log
+++ 1.0
+ * Initial release
+ 
+++ 1.1 
+ * Altered support for office vanity keys to only use agent vanity keys 
+ * Added display name and agent avatar to the $ratings array for office feed
+ 
 MIT License
 ==============
 Copyright (c) 2016 RealSatisfied & Placester Inc.
@@ -36,7 +47,7 @@ SOFTWARE.
  * 
  */
 	
-private $version = "0.3";
+private $version = "1.1";
 
 	function get_data($vanity_key, $feed_type="V2"){
 		try{
@@ -89,9 +100,15 @@ private $version = "0.3";
 
 
 			// read feed into SimpleXML object
-			$rating_data = simplexml_load_file($ratingpath) or die("<error>Rating Data Source Unavailable</error>");
+			$rating_data = simplexml_load_file($ratingpath);
+			if(!$rating_data){
+				throw new Exception("Rating Data Source Unavailable : Check the vanity_key");
+			}
 			if($datapath!=""){
-				$profile_data = simplexml_load_file($datapath) or die("<error>Data Source Unavailable</error>");
+				$profile_data = simplexml_load_file($datapath) or die("Failed : Data Source Unavailable : Check the vanity_key");
+				if(!$profile_data){
+					throw new Exception("Data Source Unavailable");
+				}
 			}
 
 			switch($feed_type){
@@ -183,7 +200,10 @@ private $version = "0.3";
 					$rs = $rating_data->channel->children('http://rss.realsatisfied.com/ns/realsatisfied/');
 					$ratingpath = $rs->officefeed;
 					//reset paths
-					$rating_data = simplexml_load_file($ratingpath) or die("<error>Rating Data Source Unavailable</error>");
+					$rating_data = simplexml_load_file($ratingpath);
+					if(!$rating_data){
+						throw new Exception("Rating Data Source Unavailable : Check the vanity_key");
+					}
 					$rs = $rating_data->channel->children('http://rss.realsatisfied.com/ns/realsatisfied/');
 
 					$data = array(
@@ -539,10 +559,11 @@ private $version = "0.3";
 			return array("status"=>1, "message"=>"OK","data"=>$data);
 
 		}catch (Exception $e){
-				return array("status"=>0, "message"=>"Failed","data"=>$e);
+			return array("status"=>0, "message"=>"Failed","data"=>$e);
 		}
 	}  
 }
+
 ?>
 
 		
