@@ -11,18 +11,7 @@ class feedread {
  * service contract entered into with RealSatisifed or it's parent company Placester Inc.
  * 
  * 
- 
- Version 1.1
- * Last updated 27-Aug-2016 by Phil Kells
- 
- Change Log
-++ 1.0
- * Initial release
- 
-++ 1.1 
- * Altered support for office vanity keys to only use agent vanity keys 
- * Added display name and agent avatar to the $ratings array for office feed
- 
+
 MIT License
 ==============
 Copyright (c) 2016 RealSatisfied & Placester Inc.
@@ -47,7 +36,7 @@ SOFTWARE.
  * 
  */
 	
-private $version = "1.1";
+private $version = "0.3";
 
 	function get_data($vanity_key, $feed_type="V2"){
 		try{
