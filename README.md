@@ -13,13 +13,14 @@ Generic PHP script to read RealSatisfied feeds, normalise the data and make avai
   Version 0.3
  * Last updated 27-Aug-2016 by Phil Kells
  
- Change Log
+Change Log
+
 ++ 0.1 
  * Initial release
- 
+
 ++ 0.2 
  * Altered support for office vanity keys to only use agent vanity keys 
  * Added display name and agent avatar to the $ratings array for office feed
  
- ++ 0.3
+++ 0.3
  * Split into a class and exmaple structure
