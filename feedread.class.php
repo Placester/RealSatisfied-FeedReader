@@ -529,7 +529,7 @@ private $version = "1.11";
 								"date"=>$item->pubDate,
 								"id"=>$item->guid,
 								"satisfaction"=>$rs_item->satisfaction,
-								"recomendation"=>$rs_item->recommendation,
+								"recommendation"=>$rs_item->recommendation,
 								"performance"=>$rs_item->performance
 							);				
 						}else{
