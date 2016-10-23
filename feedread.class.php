@@ -23,6 +23,10 @@ class feedread {
  * Altered support for office vanity keys to only use agent vanity keys 
  * Added display name and agent avatar to the $ratings array for office feed
  
+++ 1.11
+ * Added feedsource description as a variable
+ 
+ 
 MIT License
 ==============
 Copyright (c) 2016 RealSatisfied & Placester Inc.
@@ -47,7 +51,7 @@ SOFTWARE.
  * 
  */
 	
-private $version = "1.1";
+private $version = "1.11";
 
 	function get_data($vanity_key, $feed_type="V2"){
 		try{
@@ -546,6 +550,7 @@ private $version = "1.1";
 			}
 
 			$data["version"] = $this->version;
+			$data["feedsource"] = $feedsource;
 
 			/* 
 			 * $data Array contains all data related to this feed.

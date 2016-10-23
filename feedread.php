@@ -61,7 +61,7 @@ if($datareturn["status"]==1){
 ?>		
 		<h1>Rating and Testimonial Data for <span class="v"><?=$data["name"];?></span></h1>
 		<p>Version : <?=$data["version"];?></p>
-		<h5>feed format: <?=$feedsource?></h5>
+		<h5>feed format: <?=$data["feedsource"];?></h5>
 		<h5>review the RealSatisfied XML name space for detail on specific data available : <a href="http://rss.realsatisfied.com/ns/realsatisfied/" target="_blank">http://rss.realsatisfied.com/ns/realsatisfied/</a></h5>
 		<div class="data">
 			<div class="l">$data array</div>

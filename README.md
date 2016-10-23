@@ -29,3 +29,13 @@ Change Log
  
 ++ 0.3
  * Split into a class and exmaple structure
+
+++ 1.0
+ * Initial release
+ 
+++ 1.1 
+ * Altered support for office vanity keys to only use agent vanity keys 
+ * Added display name and agent avatar to the $ratings array for office feed
+ 
+++ 1.11
+ * Added feedsource description as a variable
