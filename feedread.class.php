@@ -62,7 +62,7 @@ private $version = "1.11";
 			$feed_type = strtoupper($feed_type);
 
 			if($feed_type =='V1' || $feed_type =='V2' || $feed_type =='OFFICE' || $feed_type =='RDC' || $feed_type =='HAR'){
-				$feed_type = strtoupper($_GET["t"]);
+				$feed_type = strtoupper($feed_type);
 			}else{
 				$feed_type = 'V2';
 			}
