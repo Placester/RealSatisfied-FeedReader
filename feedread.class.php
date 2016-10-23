@@ -528,7 +528,7 @@ private $version = "1.11";
 								"customer_type"=>$rs_item->customer_type,
 								"date"=>$item->pubDate,
 								"id"=>$item->guid,
-								"satisfation"=>$rs_item->satisfaction,
+								"satisfaction"=>$rs_item->satisfaction,
 								"recomendation"=>$rs_item->recommendation,
 								"performance"=>$rs_item->performance
 							);				

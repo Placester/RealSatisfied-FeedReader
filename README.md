@@ -39,3 +39,6 @@ Change Log
  
 ++ 1.11
  * Added feedsource description as a variable
+
+++ 1.12
+ * fixed typo
