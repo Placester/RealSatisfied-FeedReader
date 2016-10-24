@@ -15,8 +15,8 @@ Generic PHP script to read RealSatisfied feeds, normalise the data and make avai
 			 )
  * This script is provided under the MIT licence. This licence does not alter or impact any rights under the RealSatisfied terms of service or under any service contract entered into with RealSatisifed or it's parent company Placester Inc.
  
-  Version 0.3
- * Last updated 27-Aug-2016 by Phil Kells
+  Version 1.2
+ * Last updated 24-Oct-2016 by Phil Kells
  
 Change Log
 
