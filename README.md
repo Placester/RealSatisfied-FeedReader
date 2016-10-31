@@ -42,4 +42,6 @@ Change Log
 
 ++ 1.12
  * fixed typo
+
+++ 1.3
  * tweaked RD and errors

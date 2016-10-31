@@ -26,7 +26,7 @@ class feedread {
 ++ 1.11
  * Added feedsource description as a variable
  
- ++ 1.12
+ ++ 1.3
  * tweaked RDC and errors
  
  
@@ -54,7 +54,7 @@ SOFTWARE.
  * 
  */
 	
-private $version = "1.12";
+private $version = "1.3";
 
 	function get_data($vanity_key, $feed_type="V2"){
 		try{
