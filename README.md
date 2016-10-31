@@ -42,3 +42,4 @@ Change Log
 
 ++ 1.12
  * fixed typo
+ * tweaked RD and errors

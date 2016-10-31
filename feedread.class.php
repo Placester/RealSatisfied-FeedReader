@@ -26,6 +26,9 @@ class feedread {
 ++ 1.11
  * Added feedsource description as a variable
  
+ ++ 1.12
+ * tweaked RDC and errors
+ 
  
 MIT License
 ==============
@@ -51,7 +54,7 @@ SOFTWARE.
  * 
  */
 	
-private $version = "1.11";
+private $version = "1.12";
 
 	function get_data($vanity_key, $feed_type="V2"){
 		try{
@@ -302,7 +305,7 @@ private $version = "1.11";
 						"show_scores"=>"1",
 						"show_tetimonials"=>"1",
 						"ratingdisplayformat"=>"stars",
-						"feed_format"=>"detailed",
+						"feed_format"=>$rs->feed_format",
 						"office_website"=>$rs->website,
 						"entity_website"=>$rs->personal_url,
 						"facebook"=>$rs->facebook_url,
@@ -394,7 +397,7 @@ private $version = "1.11";
 						"show_scores"=>"1",
 						"show_tetimonials"=>"1",
 						"ratingdisplayformat"=>"stars",
-						"feed_format"=>'detailed',
+						"feed_format"=>$rs->feed_format",
 						"office_website"=>$rs->website,
 						"entity_website"=>$rs->personal_url,
 						"facebook"=>$rs->facebook_url,
@@ -564,7 +567,7 @@ private $version = "1.11";
 			return array("status"=>1, "message"=>"OK","data"=>$data);
 
 		}catch (Exception $e){
-			return array("status"=>0, "message"=>"Failed","data"=>$e);
+			return array("status"=>0, "message"=>"Failed","data"=>$e->getMessage());
 		}
 	}  
 }
