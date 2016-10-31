@@ -94,7 +94,7 @@ private $version = "1.3";
 				break;
 				case "RDC":
 					$ratingpath = "http://rss.realsatisfied.com/rdc/agent/" . $vanity_key;
-					$datapath = "http://rss.realsatisfied.com/rss/v1/agent/" . $vanity_key;
+					$datapath = "http://rss.realsatisfied.com/rss/v2/agent/" . $vanity_key;
 					$feedsource = "RDC style ratings (profile data from RealSatisfied)";
 				break;
 				case "V2":
@@ -305,7 +305,7 @@ private $version = "1.3";
 						"show_scores"=>"1",
 						"show_tetimonials"=>"1",
 						"ratingdisplayformat"=>"stars",
-						"feed_format"=>$rs->feed_format",
+						"feed_format"=>$rs->feed_format,
 						"office_website"=>$rs->website,
 						"entity_website"=>$rs->personal_url,
 						"facebook"=>$rs->facebook_url,
@@ -397,7 +397,7 @@ private $version = "1.3";
 						"show_scores"=>"1",
 						"show_tetimonials"=>"1",
 						"ratingdisplayformat"=>"stars",
-						"feed_format"=>$rs->feed_format",
+						"feed_format"=>$rs->feed_format,
 						"office_website"=>$rs->website,
 						"entity_website"=>$rs->personal_url,
 						"facebook"=>$rs->facebook_url,
